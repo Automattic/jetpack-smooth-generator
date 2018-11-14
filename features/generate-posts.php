@@ -55,22 +55,22 @@ function jsg_generate_posts( $number = 10 ) {
 				}
 			}
 		} catch ( Exception $e ) {
-			jsg_debug( sprintf( __( 'Something failed while trying to generate posts: %s', 'jetpack-smooth-generator' ), CONTENT_SITE_URL, $e->getMessage() ) );
+			jsg_debug( sprintf( __( 'Something failed while trying to generate posts: %s', 'jetpack-smooth-generator' ), JETPACK_SMOOTH_GENERATOR_CONTENT_SITE_URL, $e->getMessage() ) );
 		}
 	}
 }
 
 
 function jsg_get_posts_from_mother_site( $per_page = 10, $page = 1 ) {
-	$request = wp_remote_get( CONTENT_SITE_URL . "/wp-json/wp/v2/posts?page=$page&per_page=$per_page" );
+	$request = wp_remote_get( JETPACK_SMOOTH_GENERATOR_CONTENT_SITE_URL . "/wp-json/wp/v2/posts?page=$page&per_page=$per_page" );
 	if ( is_wp_error( $request ) ) {
-		jsg_debug( sprintf( __( 'Something failed while trying to fetch posts from %s', 'jetpack-smooth-generator' ), CONTENT_SITE_URL ) );
+		jsg_debug( sprintf( __( 'Something failed while trying to fetch posts from %s', 'jetpack-smooth-generator' ), JETPACK_SMOOTH_GENERATOR_CONTENT_SITE_URL ) );
 		return [];
 	}
 	$body = wp_remote_retrieve_body( $request );
 	$data = json_decode( $body );
 	if ( jsg_is_404( $request ) ) {
-		jsg_debug( sprintf( __( 'The API endpoint on %1$s returned 404 for that query %2$s', 'jetpack-smooth-generator' ), CONTENT_SITE_URL ) );
+		jsg_debug( sprintf( __( 'The API endpoint on %1$s returned 404 for that query %2$s', 'jetpack-smooth-generator' ), JETPACK_SMOOTH_GENERATOR_CONTENT_SITE_URL ) );
 		return [];
 	}
 	return $data;

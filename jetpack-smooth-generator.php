@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit();
 }
 
-define( 'CONTENT_SITE_URL', 'https://bleeding.jurassic.ninja' );
+define( 'JETPACK_SMOOTH_GENERATOR_CONTENT_SITE_URL', 'https://bleeding.jurassic.ninja' );
 
 jsg_cli();
 
