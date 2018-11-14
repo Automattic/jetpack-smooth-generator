@@ -19,6 +19,9 @@
 		<rule ref="WordPress.Arrays.MultipleStatementAlignment.DoubleArrowNotAligned">
 			<severity>0</severity>
 		</rule>
+		<rule ref="WordPress.WP.I18n.MissingTranslatorsComment">
+			<severity>0</severity>
+		</rule>
 		<!-- Check all PHP files in directory tree by default. -->
 		<arg name="extensions" value="php"/>
 		<file>.</file>

@@ -20,8 +20,8 @@ function jsg_cli() {
 			'generate-settings.php',
 		);
 
-		foreach( $features as $feature ) {
-			require( "features/$feature" );
+		foreach ( $features as $feature ) {
+			require "features/$feature";
 
 		}
 	}
