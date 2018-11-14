@@ -2,6 +2,8 @@
 
 Inspired by [WooCommerce Smooth Generator](https://github.com/woocommerce/wc-smooth-generator), Jetpack Smooth Generator creates dummy content via the command line interface providing the site with different combinations of posts and Jetpack settings. 
 
+**Currently not functional**.
+
 ## Example usage
 
 Generate 12 posts
