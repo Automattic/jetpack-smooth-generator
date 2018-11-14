@@ -51,10 +51,9 @@ function jsg_generate_posts( $number = 10 ) {
 					echo "WOW";
 				}
 				$number--;
-				if ( $number < 0 ) {
+				if ( $number < 1 ) {
 					break;
 				}
-				// echo "$post[title]\n";
 			}
 
 		} catch ( Exception $e ) {
